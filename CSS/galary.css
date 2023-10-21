@@ -1,0 +1,225 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    transition: all 0.5s;
+}
+body{
+    background-image: linear-gradient(red,purple);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#gallaryImageEdit{
+    width: 95%;
+    height: 100%;
+    background-color: rgb(247, 13, 13);
+    /* display: flex; */
+    display: none;
+    z-index: 20;
+    position: fixed;
+}
+#imageContainer{
+    width: 60%;
+    height: 100%;
+    background-color: rgb(47, 46, 45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#editContainer{
+    width: 40%;
+    height: 100%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#editFilter{
+    width: 50%;
+    height: 100%;
+    background-color: snow;
+    border-left: 2px solid gray;
+}
+#editTransform{
+    width: 49%;
+    height: 100%;
+    background-color: snow;
+    border-left: 2px solid gray;
+}
+#image{
+    /* filter: blur() brightness() contrast() grayscale() hue-rotate() invert() opacity() saturate() sepia(); */
+    /* transform: rotateX() rotateY() rotate() scaleX() scaleY() skewX() skewY() translateX() translateY(); */
+    width: 90%;
+    height: 60vh;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.filterContainer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(45, 45, 45);
+    color: white;
+}
+input{
+    width: 80%;
+}
+h2{
+    text-align: center;
+}
+
+
+ /* editing */
+.a{
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 3%;
+    box-shadow: 2px 2px 5px black;
+}
+
+#cardsCollection{
+    /* position: fixed; */
+    width: 100%;
+    height:100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* align-content: space-evenly; */
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.256);
+    border-radius: 15px;
+}
+#container{
+    width: 95%;
+    height: 250vh;
+    background-color: rgba(0, 0, 0, 0.427);
+    /* padding-top: 50px; */
+    display: flex;
+    border-radius: 10px;
+    padding-top: 250px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; 
+    background-position: fixed;
+    /* overflow: hidden; */
+
+}
+.a:hover{
+     transform: scale(1.2) rotateY(360deg);
+    transition: 1s;
+}
+#heading{
+    width: 50%;
+    height: 60px;
+    position: absolute;
+    background-image: linear-gradient(35deg,green,yellow,blue);
+    color: transparent;
+    background-size: 1200px;
+    background-position: 1200px;
+    -webkit-background-clip: text;
+    animation: demo 2s infinite linear both;
+    z-index: 10;
+    top:6%;
+    left:-2%;
+    letter-spacing: 3px;
+    font-size: 4vw;
+    padding-left: 120px;
+}
+@keyframes demo {
+    from{
+        background-position: 1200px;
+    }
+    to{
+        background-position: 0px;
+    }
+    
+}
+
+#close{
+    position: absolute;
+    top:0%;
+    left:90.57%;
+    font-size: 17px;
+    border:1px solid black;
+    padding: 6px 12px;
+    z-index: 11;
+    cursor: pointer;
+    color: red;
+    background-color: black;
+}
+#close:hover{
+    background-color: red;
+    color: white;
+}
+#editButton:hover{
+    background-color: rgb(42, 40, 40);
+}
+#editButton{
+    background-color: black;
+    color:white;
+    letter-spacing: 20px;
+    width: 87%;
+    height: 45px;
+    z-index: 10;
+    font-size: 25px;
+    position: fixed;
+    bottom: 2%;
+    left:6.5%;
+    cursor: pointer;
+}
+#newWindow{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.645);
+    z-index: 11;
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+#windowimg{
+    width: 87%;
+    height: 90vh;
+    /* background-color: rgba(0, 0, 0, 0.102); */
+    position:absolute;
+    display: flex;
+    top:0%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+/* {
+    width:85%;
+    height: 83vh;
+} */
+#span{
+    background-color: black;
+    color: red;
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    z-index: 21;
+    top:0%;
+    left: 0%;
+    font-size: 32px;
+    padding-left: 6px;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+#span:hover{
+    background-color: red;
+    color: white;
+}
+#div{
+    width: 10px;
+    height: 10px;
+}
